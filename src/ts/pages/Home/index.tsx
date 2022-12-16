@@ -7,7 +7,9 @@ const Home: React.FC = () => {
                 <div>
                     <h1>RP Gaming Fest</h1>
                 </div>
-                <Button>Réserver</Button>
+                <Button>
+                    <a href='http://www.eventbrite.fr' target='_blank'>Réserver</a>
+                </Button>
             </Img>
             <h2>Où nous trouver</h2>
             <p>46 avenue des canadiens, Grand Quevilly</p>
@@ -16,7 +18,9 @@ const Home: React.FC = () => {
                 <h2>Dates de l'évènement</h2>
                 <h2>le 21 et 22 janvier 2023</h2>
                 <h2>de 09h00 à 19h00</h2>
-                <Button>Réserver</Button>
+                <Button>
+                    <a href='http://www.eventbrite.fr' target='_blank'>Réserver</a>
+                </Button>
             </Info>
         </Container>
     );
@@ -67,7 +71,11 @@ const Button = styled.button`
     cursor: pointer;
     margin: 10px 20px;
     &:hover {
-        background-color: #000;
+        background-color: #fff;
+        color: #000;
+    }
+    a {
+        text-decoration: none;
         color: #fff;
     }
 `;

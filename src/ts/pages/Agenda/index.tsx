@@ -94,7 +94,7 @@ const event_data = [
 ];
 
 const Agenda: React.FC = () => {
-    return (
+    return (  
         <Container>
             {
                 event_data.map((event) => {
@@ -102,7 +102,6 @@ const Agenda: React.FC = () => {
                     />
                 })
             }
-            <Event title='Workshop xxxx' start_time='17:30' end_time='19:00' durée='1h30' salle='Workshop 2' type='workshop'/>
         </Container>
     );
 };

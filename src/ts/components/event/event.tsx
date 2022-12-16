@@ -20,7 +20,37 @@ const Event: React.FC<IProps> = ({title, start_time, end_time, durée, salle, ty
                     <h3>{title}</h3>
                     <span>{salle}</span>
                 </Content>
-                <Button>
+
+                <Button onClick={() => {
+                    // get the current localStorage
+                    let current = localStorage.getItem('events');
+                    // create the event object
+                    let event = {
+                        title: title,
+                        start_time: start_time,
+                        end_time: end_time,
+                        durée: durée,
+                        salle: salle,
+                        type: type
+                    };
+                    console.log(JSON.stringify(JSON.stringify(event)));
+                    // if there is no localStorage, create one
+                    if (current === null) {
+                        localStorage.setItem('events', JSON.stringify([JSON.stringify(event)]));
+                    } else {
+                        // if there is a localStorage, parse it and add the new event
+                        // verify if the event is already in the localStorage and remove it from localstorage if it is
+                        let events = JSON.parse(current);
+                        let index = events.indexOf(JSON.stringify(event));
+                        if (index > -1) {
+                            events.splice(index, 1);
+                        } else {
+                            events.push(JSON.stringify(event));
+                        }
+                        localStorage.setItem('events', JSON.stringify(events));
+                    }
+                    window.location.reload()
+                }}>
                     <img src="/heart.png" alt="" width="20px" height="22px"/>
                 </Button>
             </Events>

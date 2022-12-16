@@ -58,6 +58,7 @@ const Event: React.FC<IProps> = ({title, start_time, end_time, durée, salle, ty
     );
 };
 const Container = styled.div`
+    margin-top:1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +68,9 @@ const Container = styled.div`
 
 const Events = styled.div`
     background-color: ${props => props.theme.colors.body};
-    border: 1px solid #989898;
+    border: none;
+    border-radius:10px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -82,8 +85,9 @@ const Content = styled.div`
     justify-content: center;
     margin: 10px 20px;
     h2 {
-        font-family: 'enchanted';
+        font-family: 'poppins';
         font-size: 20px;
+        font-weight:500;
         color: #000;
     }
     h3 {
@@ -92,7 +96,7 @@ const Content = styled.div`
         color: #000;
     }
     span {
-        font-family: 'enchanted';
+        font-family: 'poppins';
         font-size: 20px;
         color: #000;
     }
@@ -100,13 +104,17 @@ const Content = styled.div`
 
 // Make a button with a heart with rounded corners
 const Button = styled.button`
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: #fff;
-    border: 1px solid #989898;
+    border: 2px solid #E9E9E9;
     border-radius: 50%;
     cursor: pointer;
     margin: 10px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     &:hover {
         background-color: #000;
         color: #fff;

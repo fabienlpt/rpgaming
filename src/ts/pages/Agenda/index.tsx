@@ -105,5 +105,9 @@ const Agenda: React.FC = () => {
         </Container>
     );
 };
-const Container = styled.div``;
+const Container = styled.div`
+  margin-top:2rem;
+`;
 export default Agenda;
+
+

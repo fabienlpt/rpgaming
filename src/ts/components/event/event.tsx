@@ -70,11 +70,11 @@ const Events = styled.div`
     background-color: ${props => props.theme.colors.body};
     border: none;
     border-radius:10px;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     width: 90%;
     display: flex;
     flex-direction: row;
-    margin: 10px 0;
+    margin: 1px 0;
     align-items: center;
     justify-content: space-between;
 `;
@@ -84,11 +84,15 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: 10px 20px;
+    padding:0.6rem 0;
+    
     h2 {
+        position:relative;
         font-family: 'poppins';
         font-size: 20px;
         font-weight:500;
         color: #000;
+        margin-bottom:6px;
     }
     h3 {
         font-family: 'enchanted';
@@ -116,7 +120,7 @@ const Button = styled.button`
     justify-content:center;
 
     &:hover {
-        background-color: #000;
+        background-color: #fff;
         color: #fff;
     }
 `;
